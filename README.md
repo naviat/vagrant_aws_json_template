@@ -1,3 +1,4 @@
+# installation
 - install vagrant
 # install vagrant plugin for aws
 - vagrant plugin install vagrant-aws
