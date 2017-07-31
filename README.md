@@ -1,3 +1,5 @@
+# description
+start up a arbitrary number of machines with custom provisioning in the aws cloud (including data point mount)
 # installation
 - install vagrant
 # install vagrant plugin for aws
