@@ -1,0 +1,100 @@
+{
+	"region": "eu-central-1",
+	"availability_zone": "",
+	"security_groups": ["sg-xxxxxx",],
+	"ssh_username": "ubuntu",
+	"subnet_id" : "subnet-xxxxxx",
+	"instances": {
+		"api1-dev": {
+			"disabled": false,
+			"ami_id": "ami-9cc4f681",
+			"instance_type": "m3.medium",
+			"elb": "lb-01",
+			"private_ip": "xx.xxx.xx.xxx",
+			"tags": {
+			},
+			"provisioners":[
+				"common/provision.sh",
+				"api/provision.sh",
+			],
+			"args":[
+			],
+			"shares": {
+				"/usr/share/vagrant/api-data": "./api-data"
+			}
+		},
+		"api2-dev": {
+			"disabled": false,
+			"ami_id": "ami-9cc4f681",
+			"instance_type": "c3.xlarge",
+			"elb": "lb-aws-morecast-01",
+			"private_ip": "xx.xxx.xx.xxx",
+			"tags": {
+			},
+			"provisioners":[
+				"common/provision.sh",
+				"api/provision.sh",
+			],
+			"args":[
+			],
+			"shares": {
+				"/usr/share/vagrant/api-data": "./api-data"
+			}
+		},
+		"api3-dev": {
+			"disabled": true,
+			"ami_id": "ami-9cc4f681",
+			"instance_type": "m3.medium",
+			"elb": "lb-aws-morecast-01",
+			"private_ip": "xx.xxx.xx.xxx",
+			"tags": {
+			},
+			"provisioners":[
+				"common/provision.sh",
+				"api/provision.sh",
+			],
+			"args":[
+			],
+			"shares": {
+				"/usr/share/vagrant/api-data": "./api-data"
+			}
+		},
+		"api4-dev": {
+			"disabled": true,
+			"ami_id": "ami-9cc4f681",
+			"instance_type": "m3.medium",
+			"elb": "lb-aws-morecast-01",
+			"private_ip": "xx.xxx.xx.xxx",
+			"tags": {
+			},
+			"provisioners":[
+				"common/provision.sh",
+				"api/provision.sh",
+			],
+			"args":[
+			],
+			"shares": {
+				"/usr/share/vagrant/api-data": "./api-data"
+			}
+		},
+		"db1-dev": {
+			"disabled": true,
+			"ami_id": "ami-9cc4f681",
+			"instance_type": "m3.medium",
+			"elb": "",
+			"private_ip": "xx.xxx.xx.xxx",
+			"tags": {
+			},
+			"provisioners":[
+				"common/provision.sh",
+				"db/provision.sh",
+			],
+			"args":[
+			],
+			"shares": {
+				"/usr/share/vagrant/db1-data": "./db1-data"
+			}
+		},
+
+	}	
+}

@@ -1,0 +1,6 @@
+{
+	"access_key": "",
+	"secret_key": "",
+	"ssh_private_key_path": "~/.ssh/vagrant_ec2",
+	"keypair_name": "vagrant_ec2"
+}
